@@ -230,12 +230,11 @@
                 <h2 id="encargados">{{ __('messages.encargados') }}</h2>
             </div>
             <div class="row justify-content-center justify-content-lg-center">
-
-                <div class="col-lg-3 col mb-4">
+        
+                <div class="col-lg-3 col-md-6 mb-4"> <!-- En dispositivos grandes, tomará 3 columnas, en dispositivos medianos tomará 6 -->
                     <div class="team-item bg-white" style="transform: scale(0.8);">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" style="height: 300px;"
-                                src="{{ asset('images/DonEzequielW.webp') }}" alt="">
+                            <img class="img-fluid w-100" style="height: 300px;" src="{{ asset('images/DonEzequielW.webp') }}" alt="">
                         </div>
                         <div class="text-center py-4">
                             <h5 class="font-weight-bold">{{ __('messages.director_camhotur') }}</h5>
@@ -243,12 +242,11 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col mb-4">
+        
+                <div class="col-lg-3 col-md-6 mb-4"> <!-- En dispositivos grandes, tomará 3 columnas, en dispositivos medianos tomará 6 -->
                     <div class="team-item bg-white" style="transform: scale(0.8);">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" style="height: 300px;"
-                                src="{{ asset('images/CarlosAvila2.webp') }}" alt="">
+                            <img class="img-fluid w-100" style="height: 300px;" src="{{ asset('images/CarlosAvila2.webp') }}" alt="">
                         </div>
                         <div class="text-center py-4">
                             <h5 class="font-weight-bold">{{ __('messages.asociado_camhotur') }}</h5>
@@ -256,9 +254,10 @@
                         </div>
                     </div>
                 </div>
-
+        
             </div>
         </div>
+        
     </div>
 
 
@@ -465,49 +464,49 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> {{ __('messages.info_distrito') }} </h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{ __('messages.info_distrito') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                        <!-- <span aria-hidden="true"><i class="fa fa-close"></i></span> -->
                     </button>
                 </div>
-
+            
                 <div class="modal-body">
                     <div class="row g-0">
-                        <div class="col-md border-right">
+                        <div class="col-md-12"> <!-- Utiliza una sola columna para el contenido -->
                             <div class="status p-3">
-                                <table class="table table-borderless">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block">{!! __('messages.descripcion_ho') !!}</span>
-                                                    <span
-                                                        class="subheadings">{{ __('messages.descripcion_text_ho') }}</span>
-                                                </div>
-
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block"> {!! __('messages.ubicacion_ho') !!} </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <div class="d-flex flex-column">
-                                                    <iframe
-                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15713.99847071314!2d-85.41914105000001!3d10.05808585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fbab6419868c1%3A0x5fc5a738d1b6b9de!2sProvincia%20de%20Guanacaste%2C%20Hojancha!5e0!3m2!1ses!2scr!4v1708365080438!5m2!1ses!2scr"
-                                                        width="700" height="350" style="border:0;"
-                                                        allowfullscreen="" loading="lazy"
-                                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive"> <!-- Agrega esta clase para hacer la tabla responsive -->
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.descripcion_ho') !!}</span>
+                                                        <span class="subheadings">{{ __('messages.descripcion_text_ho') }}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.ubicacion_ho') !!}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="embed-responsive embed-responsive-16by9"> <!-- Agrega esta clase para hacer el iframe responsive -->
+                                                            <iframe
+                                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15713.99847071314!2d-85.41914105000001!3d10.05808585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fbab6419868c1%3A0x5fc5a738d1b6b9de!2sProvincia%20de%20Guanacaste%2C%20Hojancha!5e0!3m2!1ses!2scr!4v1708365080438!5m2!1ses!2scr"
+                                                                class="embed-responsive-item" allowfullscreen="" loading="lazy"
+                                                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -522,60 +521,51 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> {{ __('messages.info_distrito') }} </h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{ __('messages.info_distrito') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                        <!-- <span aria-hidden="true"><i class="fa fa-close"></i></span> -->
                     </button>
                 </div>
-
+            
                 <div class="modal-body">
                     <div class="row g-0">
-                        <div class="col-md border-right">
+                        <div class="col-md-12"> <!-- Utiliza una sola columna para el contenido -->
                             <div class="status p-3">
-                                <table class="table table-borderless">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block">{!! __('messages.descripcion_heading_hu') !!}</span>
-                                                    <span
-                                                        class="subheadings">{{ __('messages.descripcion_text_hu') }}</span>
-                                                    <br> <!-- Espacio agregado entre la descripción y la ubicación -->
-                                                    <span class="heading d-block">{!! __('messages.ubicacion_heading_hu') !!}</span>
-                                                    <span
-                                                        class="subheadings">{{ __('messages.ubicacion_text_hu') }}</span>
-                                                </div>
-                                                <style>
-                                                    .subheadings {
-                                                        margin-bottom: 20px;
-                                                        /* Ajusta el valor según sea necesario */
-                                                    }
-                                                </style>
-
-
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block"> {!! __('messages.ubicacion_hu') !!} </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <div class="d-flex flex-column">
-                                                    <iframe
-                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31431.089039769315!2d-85.36122139999999!3d10.0262546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fa49f3e23aa93%3A0x7fdb594211cb9a6a!2sProvincia%20de%20Guanacaste%2C%20Huacas!5e0!3m2!1ses!2scr!4v1708372769489!5m2!1ses!2scr"
-                                                        width="700" height="350" style="border:0;"
-                                                        allowfullscreen="" loading="lazy"
-                                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive"> <!-- Agrega esta clase para hacer la tabla responsive -->
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.descripcion_heading_hu') !!}</span>
+                                                        <span class="subheadings">{{ __('messages.descripcion_text_hu') }}</span>
+                                                        <br> <!-- Espacio agregado entre la descripción y la ubicación -->
+                                                        <span class="heading d-block">{!! __('messages.ubicacion_heading_hu') !!}</span>
+                                                        <span class="subheadings">{{ __('messages.ubicacion_text_hu') }}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.ubicacion_hu') !!}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="embed-responsive embed-responsive-16by9"> <!-- Agrega esta clase para hacer el iframe responsive -->
+                                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31431.089039769315!2d-85.36122139999999!3d10.0262546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fa49f3e23aa93%3A0x7fdb594211cb9a6a!2sProvincia%20de%20Guanacaste%2C%20Huacas!5e0!3m2!1ses!2scr!4v1708372769489!5m2!1ses!2scr"
+                                                                    class="embed-responsive-item" allowfullscreen="" loading="lazy"
+                                                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -590,50 +580,49 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> {{ __('messages.info_distrito') }} </h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{ __('messages.info_distrito') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                        <!-- <span aria-hidden="true"><i class="fa fa-close"></i></span> -->
                     </button>
                 </div>
-
+            
                 <div class="modal-body">
                     <div class="row g-0">
-                        <div class="col-md border-right">
+                        <div class="col-md-12"> <!-- Utiliza una sola columna para el contenido -->
                             <div class="status p-3">
-                                <table class="table table-borderless">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block">{!! __('messages.descripcion_romo') !!}</span>
-                                                    <span
-                                                        class="subheadings">{{ __('messages.descripcion_text_romo') }}</span>
-                                                </div>
-
-
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block"> {!! __('messages.ubicacion_romo') !!}</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <div class="d-flex flex-column">
-                                                    <iframe
-                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7858.442265061447!2d-85.3838647!3d9.998584300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fa4597ca11463%3A0xbe66376f55a2ac4e!2sProvincia%20de%20Guanacaste%2C%20Monte%20Romo!5e0!3m2!1ses!2scr!4v1708372839548!5m2!1ses!2scr"
-                                                        width="700" height="350" style="border:0;"
-                                                        allowfullscreen="" loading="lazy"
-                                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive"> <!-- Agrega esta clase para hacer la tabla responsive -->
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.descripcion_romo') !!}</span>
+                                                        <span class="subheadings">{{ __('messages.descripcion_text_romo') }}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.ubicacion_romo') !!}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="embed-responsive embed-responsive-16by9"> <!-- Agrega esta clase para hacer el iframe responsive -->
+                                                            <iframe
+                                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7858.442265061447!2d-85.3838647!3d9.998584300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fa4597ca11463%3A0xbe66376f55a2ac4e!2sProvincia%20de%20Guanacaste%2C%20Monte%20Romo!5e0!3m2!1ses!2scr!4v1708372839548!5m2!1ses!2scr"
+                                                                class="embed-responsive-item" allowfullscreen="" loading="lazy"
+                                                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -648,49 +637,49 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> {{ __('messages.info_distrito') }} </h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{ __('messages.info_distrito') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                        <!-- <span aria-hidden="true"><i class="fa fa-close"></i></span> -->
                     </button>
                 </div>
-
+            
                 <div class="modal-body">
                     <div class="row g-0">
-                        <div class="col-md border-right">
+                        <div class="col-md-12"> <!-- Utiliza una sola columna para el contenido -->
                             <div class="status p-3">
-                                <table class="table table-borderless">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block">{!! __('messages.descripcion_mata') !!}</span>
-                                                    <span
-                                                        class="subheadings">{{ __('messages.descripcion_text_mata') }}</span>
-                                                </div>
-
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block"> {!! __('messages.ubicacion_mata') !!} </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <div class="d-flex flex-column">
-                                                    <iframe
-                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7856.262785047611!2d-85.4208362!3d10.088318600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fba8c08620079%3A0xeb977c9a153e63d7!2sProvincia%20de%20Guanacaste%2C%20Hojancha%2C%20Matamb%C3%BA!5e0!3m2!1ses!2scr!4v1708372874221!5m2!1ses!2scr"
-                                                        width="700" height="350" style="border:0;"
-                                                        allowfullscreen="" loading="lazy"
-                                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive"> <!-- Agrega esta clase para hacer la tabla responsive -->
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.descripcion_mata') !!}</span>
+                                                        <span class="subheadings">{{ __('messages.descripcion_text_mata') }}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.ubicacion_mata') !!}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="embed-responsive embed-responsive-16by9"> <!-- Agrega esta clase para hacer el iframe responsive -->
+                                                            <iframe
+                                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7856.262785047611!2d-85.4208362!3d10.088318600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fba8c08620079%3A0xeb977c9a153e63d7!2sProvincia%20de%20Guanacaste%2C%20Hojancha%2C%20Matamb%C3%BA!5e0!3m2!1ses!2scr!4v1708372874221!5m2!1ses!2scr"
+                                                                class="embed-responsive-item" allowfullscreen="" loading="lazy"
+                                                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -706,49 +695,49 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> {{ __('messages.info_distrito') }} </h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{ __('messages.info_distrito') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                        <!-- <span aria-hidden="true"><i class="fa fa-close"></i></span> -->
                     </button>
                 </div>
-
+            
                 <div class="modal-body">
                     <div class="row g-0">
-                        <div class="col-md border-right">
+                        <div class="col-md-12"> <!-- Utiliza una sola columna para el contenido -->
                             <div class="status p-3">
-                                <table class="table table-borderless">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block">{!! __('messages.descripcion_pue') !!}</span>
-                                                    <span
-                                                        class="subheadings">{{ __('messages.descripcion_text_pue') }}</span>
-                                                </div>
-
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex flex-column">
-                                                    <span class="heading d-block"> {!! __('messages.ubicacion_pue') !!} </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <div class="d-flex flex-column">
-                                                    <iframe
-                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7861.579333661974!2d-85.4802632!3d9.868006099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9f0779c5355431%3A0xa8bffef327125a96!2sProvincia%20de%20Guanacaste%2C%20Puerto%20Carrillo!5e0!3m2!1ses!2scr!4v1708372962440!5m2!1ses!2scr"
-                                                        width="700" height="350" style="border:0;"
-                                                        allowfullscreen="" loading="lazy"
-                                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="table-responsive"> <!-- Agrega esta clase para hacer la tabla responsive -->
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.descripcion_pue') !!}</span>
+                                                        <span class="subheadings">{{ __('messages.descripcion_text_pue') }}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <span class="heading d-block">{!! __('messages.ubicacion_pue') !!}</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex flex-column">
+                                                        <div class="embed-responsive embed-responsive-16by9"> <!-- Agrega esta clase para hacer el iframe responsive -->
+                                                            <iframe
+                                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7861.579333661974!2d-85.4802632!3d9.868006099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9f0779c5355431%3A0xa8bffef327125a96!2sProvincia%20de%20Guanacaste%2C%20Puerto%20Carrillo!5e0!3m2!1ses!2scr!4v1708372962440!5m2!1ses!2scr"
+                                                                class="embed-responsive-item" allowfullscreen="" loading="lazy"
+                                                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

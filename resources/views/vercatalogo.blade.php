@@ -5,6 +5,8 @@
             margin-right: 10px;
         }
     </style>
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.0.3/b-3.0.1/b-html5-3.0.1/datatables.min.css" rel="stylesheet"> --}}
 @endsection
 
 @section('section')
@@ -76,8 +78,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
     <script
-        src="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.0.1/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/datatables.min.js">
-    </script>
+        src="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.0.1/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/datatables.min.js"></script>
 
     <script>
         let lenguaje = localStorage.getItem("lenguaje");
@@ -130,9 +131,30 @@
 
         if (lenguaje === "Es") {
             table = $('#catalogo').DataTable({
-                "language": {
-                    "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-                },
+                // "language": {
+                //     // "url": "//cdn.datatables.net/plug-ins/2.0.3/i18n/es-ES.json"
+                    
+                // },
+                language: {
+        "decimal": "",
+        "emptyTable": "No hay información",
+        "info": "",
+        "infoEmpty": "",
+        "infoFiltered": "Filtrado total por resultados",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Mostrar MENU Entradas",
+        "loadingRecords": "Cargando...",
+        "processing": "Procesando...",
+        "search": "Buscar:",
+        "zeroRecords": "Sin resultados encontrados",
+        "paginate": {
+            "first": "Primero",
+            "last": "Ultimo",
+            "next": "Siguiente",
+            "previous": "Anterior"
+        }
+    },
                 "columnDefs": columnsEs,
                 dom: 'Bfrtip',
                 "buttons": {
@@ -169,11 +191,38 @@
             });
         } else if (lenguaje === "En") {
             table = $('#catalogo').DataTable({
-                "language": {
-                    "url": "//cdn.datatables.net/plug-ins/2.0.1/i18n/en-GB.json"
-                },
+                // "language": {
+                //     "url": "//cdn.datatables.net/plug-ins/2.0.3/i18n/en-GB.json"
+                // },
+                language: {
+        "decimal": "",
+        "emptyTable": "There is no information",
+        "info": "",
+        "infoEmpty": "",
+        "infoFiltered": "Total filtering by results",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Mostrar MENU Entradas",
+        "loadingRecords": "Loading...",
+        "processing": "Processing...",
+        "search": "Search:",
+        "zeroRecords": "No results",
+        "paginate": {
+            "first": "First",
+            "last": "Last",
+            "next": "Next",
+            "previous": "Previous"
+        }
+    },
                 "columnDefs": columnsEn,
                 dom: 'Bfrtip',
+                "buttons": {
+                    "dom": {
+                        "button": {
+                            "tag": "button",
+                            "className": "btn btn-primary mrm"
+                        }
+                    },
                 buttons: [{
                         extend: 'pdf',
                         text: "PDF",
@@ -198,8 +247,9 @@
                     'excel',
                 ],
 
-            });
-        }
+            }
+        });
+    }
     </script>
 
     <!-- JavaScript Libraries -->

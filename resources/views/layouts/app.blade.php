@@ -9,23 +9,29 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset('assets/img/favicon.ico') }}" rel="icon">
+    <link href="http://camhoturv2-main-5keui.ondigitalocean.app/assets/img/favicon.ico" rel="icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+
+       <!-- Font Awesome -->
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+
 
     @yield('css')
-
+    
     <!-- Libraries Stylesheet -->
-    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+    <link href="http://camhoturv2-main-5keui.ondigitalocean.app/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="http://camhoturv2-main-5keui.ondigitalocean.app/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="http://camhoturv2-main-5keui.ondigitalocean.app/assets/css/style.css" rel="stylesheet">
 
     <style>
         .search-container {

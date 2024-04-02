@@ -100,15 +100,7 @@
                         <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
                         <script src="https://cdn.datatables.net/2.0.0/js/dataTables.bootstrap5.js"></script>
 
-                        <script>
-                            let table = $('#catalogo').DataTable({
-                                "language": {
-                                    "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-                                }
-                            });
-                        </script>
-
-
+                     
                         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
                         <script>
                             function deleteCatalogo(catalogoId) {
