@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="http://camhoturv2-main-5keui.ondigitalocean.app/assets/img/favicon.ico" rel="icon">
+    <link href="https://camhoturv2-main-5keui.ondigitalocean.app/assets/img/favicon.ico" rel="icon">
 
 
 
@@ -27,11 +27,11 @@
     @yield('css')
     
     <!-- Libraries Stylesheet -->
-    <link href="http://camhoturv2-main-5keui.ondigitalocean.app/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="http://camhoturv2-main-5keui.ondigitalocean.app/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="https://camhoturv2-main-5keui.ondigitalocean.app/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://camhoturv2-main-5keui.ondigitalocean.app/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="http://camhoturv2-main-5keui.ondigitalocean.app/assets/css/style.css" rel="stylesheet">
+    <link href="https://camhoturv2-main-5keui.ondigitalocean.app/assets/css/style.css" rel="stylesheet">
 
     <style>
         .search-container {
